@@ -186,7 +186,7 @@
       transition: var(--transition);
       width: 100%;
       text-align: center;
-      word-break: break-all;
+      cursor: pointer;
     }
     .cta-button:hover {
       background: var(--color-primary);
@@ -263,7 +263,7 @@
         justify-content: space-between;
       }
       .telemetry-row span:last-child { text-align: right; }
-      .cta-button { width: auto; word-break: normal; }
+      .cta-button { width: auto; }
       .footer-inner { flex-direction: row; }
     }
 
@@ -303,9 +303,10 @@
             </p>
           </div>
 
-          <a href="mailto:kwixinc.io&#64;gmail.com" class="cta-button">
-            REACH_OUT_TO_LEARN_MORE // kwixinc.io @ gmail.com
-          </a>
+          <!-- HTML button obfuscated and stylized with protective spacing -->
+          <button class="cta-button" onclick="sendSecureEmail()">
+            REACH_OUT_TO_LEARN_MORE // briefing @ kwix . life
+          </button>
         </div>
 
         <div class="telemetry-card reveal">
@@ -343,6 +344,14 @@
   </footer>
 
   <script>
+    // Safe link builder script to bypass automated scraping scripts
+    function sendSecureEmail() {
+      var user = "briefing";
+      var domain = "kwix.life";
+      window.location.href = "mailto:" + user + "@" + domain;
+    }
+
+    // Scroll reveal controller
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
