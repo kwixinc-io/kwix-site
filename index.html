@@ -68,7 +68,6 @@
             flex-wrap: wrap;
         }
 
-        /* Flashy & Classy Brand Mark Container */
         .brand-mark-frame {
             position: relative;
             width: 155px;
@@ -92,7 +91,6 @@
             mix-blend-mode: screen;
         }
 
-        /* Flashy Scanning Laser Effect */
         .brand-mark-frame::after {
             content: '';
             position: absolute;
@@ -128,6 +126,25 @@
             white-space: nowrap;
         }
 
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-cyan);
+        }
+
         .btn-deck {
             border: 1px solid var(--accent-cyan);
             color: var(--accent-cyan) !important;
@@ -157,7 +174,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 8rem 5% 4rem 5%;
+            padding: 9rem 5% 5rem 5%;
             position: relative;
             background: radial-gradient(circle at 80% 25%, rgba(0, 210, 255, 0.15), transparent 50%),
                         radial-gradient(circle at 20% 75%, rgba(0, 245, 160, 0.12), transparent 50%);
@@ -203,6 +220,11 @@
             margin-bottom: 2.5rem;
             max-width: 680px;
             line-height: 1.65;
+        }
+
+        .hero-text p strong {
+            color: var(--text-main);
+            font-weight: 700;
         }
 
         .cta-group {
@@ -333,15 +355,57 @@
             font-weight: 700;
             box-shadow: 0 4px 15px rgba(0, 210, 255, 0.15);
         }
-        
-        .price-disruption-tag span {
+
+        /* About Us Section (Brief & Landmark-Driven) */
+        .about-section {
+            padding: 5rem 5%;
+            background: linear-gradient(180deg, var(--bg-dark) 0%, #060B18 50%, var(--bg-dark) 100%);
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            position: relative;
+        }
+
+        .about-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-meta h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
             color: var(--accent-neon);
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .about-meta h2 {
+            font-size: clamp(2rem, 3vw, 2.6rem);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        .about-body p {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-body p.muted-para {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
         }
 
         /* Pictorial System Architecture */
         .diagram-section {
             background: linear-gradient(180deg, var(--bg-dark) 0%, var(--surface-dark) 50%, var(--bg-dark) 100%);
-            border-top: 1px solid rgba(255, 255, 255, 0.02);
             padding: 5rem 5%;
         }
 
@@ -394,7 +458,6 @@
             line-height: 1.4;
         }
 
-        /* Perfectly Centered Bus Connectors */
         .vector-pipe-container {
             width: 100%;
             height: 70px;
@@ -683,6 +746,11 @@
                 text-align: center;
             }
 
+            .nav-links {
+                margin: 0.5rem 0;
+                gap: 1rem;
+            }
+
             .logo-container {
                 justify-content: center;
             }
@@ -693,7 +761,7 @@
             }
 
             .hero {
-                padding-top: 11rem;
+                padding-top: 13rem;
             }
 
             .hero-container {
@@ -719,6 +787,11 @@
                 padding-top: 1rem;
                 width: 100%;
                 text-align: center;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
 
             .topology-layer {
@@ -761,6 +834,11 @@
             </div>
             <div class="core-badge">Edge Compute Cluster Node v1.0</div>
         </div>
+        <div class="nav-links">
+            <a href="#about" class="nav-link">About Us</a>
+            <a href="#pipeline" class="nav-link">Topology</a>
+            <a href="#features" class="nav-link">Specs</a>
+        </div>
         <div>
             <button class="btn-deck" onclick="triggerEmailAction()">Request Pitch Deck</button>
         </div>
@@ -771,7 +849,7 @@
             <div class="hero-text">
                 <span class="tagline-highlight">Know what you take, shape what you are</span>
                 <h1>Distributed AI <br><span>For Molecular Intake.</span></h1>
-                <p>Deploying real-time sensor fusion directly at the edge. KWIX cross-references multi-spectral capturing matrices with high-fidelity geometric structural tracking arrays to decode the exact biochemical fingerprint of your food. Eliminating legacy dependence on fragile cloud tracking to surface raw truth.</p>
+                <p>Deploying real-time sensor fusion directly at the edge. KWIX cross-references multi-spectral capturing matrices with high-fidelity geometric structural tracking arrays to decode the exact biochemical fingerprint of your food. <strong>This device is engineered to be an absolute essential in all modern households—standing alongside the classic digital thermometer as a fundamental, non-negotiable health standard for daily protection.</strong> Eliminating legacy dependence on cloud latency to surface raw truth.</p>
                 <div class="cta-group">
                     <button class="btn-primary" onclick="triggerEmailAction()">Request Prototype Access</button>
                     <div class="node-status">
@@ -794,6 +872,19 @@
         </div>
     </section>
 
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-meta">
+                <h3>Who We Are</h3>
+                <h2>Engineering Permanent Landmarks</h2>
+            </div>
+            <div class="about-body">
+                <p>At KWIX, we reject fleeting product cycles and passing trends. It does not matter what specific form factors or devices we choose to create—our core directive transcends individual hardware. We build permanent landmarks in human engineering.</p>
+                <p class="muted-para">We are an elite collective of systems architects and molecular hardware engineers establishing unalterable infrastructural pillars for human optimization. Our legacy isn't measured in seasonal device updates; it is etched into the permanent baseline shift of how humanity interacts with consumption data forever.</p>
+            </div>
+        </div>
+    </section>
+
     <section class="distributed-banner">
         <div class="trust-container">
             <div class="trust-item">
@@ -811,7 +902,7 @@
         </div>
     </section>
 
-    <section class="diagram-section">
+    <section class="diagram-section" id="pipeline">
         <div class="section-title">
             <h2>Data Pipeline & System Topology</h2>
             <p>An architectural abstraction showing input processing streams and database configuration hierarchies funneling parameters directly down through the edge core.</p>
@@ -904,7 +995,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="features">
         <div class="section-title">
             <h2>The Technical Value Proposition</h2>
             <p>Disrupting legacy health-tech tracking models by moving from human guesswork to un-falsifiable molecular observation.</p>
