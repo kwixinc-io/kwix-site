@@ -71,8 +71,8 @@
         /* Flashy & Classy Brand Mark Container */
         .brand-mark-frame {
             position: relative;
-            width: 130px;
-            height: 46px;
+            width: 155px;
+            height: 48px;
             background: #02050a;
             border: 1px solid rgba(0, 210, 255, 0.25);
             padding: 4px;
@@ -87,7 +87,7 @@
         .brand-logo-image-file {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: scale-down;
             filter: contrast(1.15) brightness(1.1);
             mix-blend-mode: screen;
         }
@@ -187,6 +187,16 @@
             -webkit-text-fill-color: transparent;
         }
 
+        .tagline-highlight {
+            display: block;
+            font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+            color: var(--accent-neon);
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
         .hero-text p {
             font-size: clamp(1rem, 1.5vw, 1.2rem);
             color: var(--text-muted);
@@ -244,7 +254,7 @@
         .node-visualization {
             background: radial-gradient(circle at center, var(--surface-dark) 0%, var(--bg-dark) 100%);
             border: 1px solid rgba(0, 212, 255, 0.18);
-            height: 480px;
+            height: 510px;
             border-radius: 24px;
             display: flex;
             align-items: center;
@@ -307,6 +317,25 @@
             0% { transform: scale(0.92); opacity: 0.6; }
             50% { transform: scale(1.08); opacity: 1; }
             100% { transform: scale(0.92); opacity: 0.6; }
+        }
+
+        .price-disruption-tag {
+            position: absolute;
+            bottom: 25px;
+            background: rgba(0, 210, 255, 0.08);
+            border: 1px solid var(--accent-cyan);
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            color: #FFFFFF;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.15);
+        }
+        
+        .price-disruption-tag span {
+            color: var(--accent-neon);
         }
 
         /* Pictorial System Architecture */
@@ -466,7 +495,7 @@
         }
 
         .econ-card.highlight::before {
-            content: 'HARDWARE BENEFIT';
+            content: 'CONSUMER VALUE';
             position: absolute;
             top: -12px;
             left: 50%;
@@ -727,7 +756,6 @@
 
     <nav>
         <div class="logo-container">
-            <!-- Flashy, premium scanning-line logo module incorporating kwix-logo.jpeg -->
             <div class="brand-mark-frame">
                 <img src="kwix-logo.jpeg" alt="KWIX Architecture" class="brand-logo-image-file" />
             </div>
@@ -741,6 +769,7 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-text">
+                <span class="tagline-highlight">Know what you take, shape what you are</span>
                 <h1>Distributed AI <br><span>For Molecular Intake.</span></h1>
                 <p>Deploying real-time sensor fusion directly at the edge. KWIX cross-references multi-spectral capturing matrices with high-fidelity geometric structural tracking arrays to decode the exact biochemical fingerprint of your food. Eliminating legacy dependence on fragile cloud tracking to surface raw truth.</p>
                 <div class="cta-group">
@@ -760,7 +789,7 @@
                     </div>
                     <div style="width: 100%; text-align: center; font-size: 0.6rem; color: var(--text-muted); font-family: monospace; line-height: 1.4;">FUSION MATRIX ACTIVE<br>BIO-FINGERPRINT ENCODE</div>
                 </div>
-                <div style="position: absolute; bottom: 25px; font-size: 0.75rem; color: var(--accent-cyan); letter-spacing: 1px; text-transform: uppercase; font-weight: 700;">Local Edge Processing Core</div>
+                <div class="price-disruption-tag">At a cost of a meal</div>
             </div>
         </div>
     </section>
@@ -831,9 +860,9 @@
 
             <div class="topology-layer">
                 <div class="topology-node output-anchor">
-                    <div style="color: var(--accent-neon); margin-bottom: 0.5rem;"><i data-lucide="fingerprint"></i></div>
-                    <h4>Biochemical Fingerprint Secured</h4>
-                    <p>Generates un-falsifiable validation parameters for localized safety, macro monitoring, and tracking values.</p>
+                    <div style="color: var(--accent-neon); margin-bottom: 0.5rem;"><i data-lucide="sparkles"></i></div>
+                    <h4>Sensory Re-Creation Array</h4>
+                    <p>We capture your wow moment to recreate later—securing exact contextual profile indices.</p>
                 </div>
             </div>
 
@@ -863,8 +892,8 @@
             <div class="econ-grid">
                 <div class="econ-card highlight">
                     <div class="econ-label">Operational Longevity</div>
-                    <div class="econ-metric">Amortized Infrastructure</div>
-                    <p>Local hardware design ensures structural analysis value increases continuously over thousands of non-destructive scans.</p>
+                    <div class="econ-metric">At a cost of a meal</div>
+                    <p>Premium architectural capability democratized without long-term subscription burdens. Scaled for widespread accessibility.</p>
                 </div>
                 <div class="econ-card">
                     <div class="econ-label">Marginal Data Processing</div>
@@ -890,10 +919,10 @@
             </div>
             <div class="tech-card">
                 <div class="card-icon-frame">
-                    <i data-lucide="cpu" style="width: 24px; height: 24px;"></i>
+                    <i data-lucide="smile" style="width: 24px; height: 24px;"></i>
                 </div>
-                <h3>Distributed Edge Infrastructure</h3>
-                <p>Spectral signatures are processed locally across decentralized, on-device compute pipelines. This localized approach enables immediate, hyper-personalized food safety alerts for chemical impurities, oxidation indices, and allergens without cloud processing delays.</p>
+                <h3>Experience Capture Index</h3>
+                <p>We capture your wow moment to recreate later. Beyond analytical safety, the platform indexes peak flavor signatures and chemical notes, letting you baseline and rediscover your most pristine culinary moments.</p>
             </div>
             <div class="tech-card">
                 <div class="card-icon-frame">
@@ -912,7 +941,6 @@
     <script>
         lucide.createIcons();
 
-        // Secure client routing script to target requested domain
         function triggerEmailAction() {
             var prefix = "briefing";
             var host = "twix.life";
