@@ -150,7 +150,6 @@
             color: var(--accent-cyan);
         }
 
-        /* Emphasize Home Tab Specifically */
         .nav-link-home {
             color: var(--accent-neon);
             font-weight: 700;
@@ -233,7 +232,6 @@
             line-height: 1.65;
         }
 
-        /* Direct Hero Mission Integration Layout */
         .hero-mission-callout {
             border-left: 3px solid var(--accent-neon);
             background: rgba(0, 245, 160, 0.03);
@@ -805,6 +803,7 @@
         }
 
         .tamsamsom-grid {
+            display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
             align-items: center;
@@ -1044,14 +1043,12 @@
 
     <nav>
         <div class="logo-container">
-            <!-- Brand logo triggers scroll back to top -->
             <div class="brand-mark-frame" style="cursor: pointer;" onclick="navigateToTop()">
                 <img src="kwix-logo.jpeg" alt="KWIX Architecture" class="brand-logo-image-file" />
             </div>
             <div class="core-badge">Edge Intelligence Module</div>
         </div>
         <div class="nav-links">
-            <!-- Home tab now points to top anchor and actively handles instant reset -->
             <a onclick="navigateToTop()" class="nav-link nav-link-home">Home</a>
             <a href="#about" class="nav-link">Team</a>
             <a href="#pipeline" class="nav-link">Data Flow</a>
@@ -1078,7 +1075,6 @@
                 
                 <p id="hero-desc">KWIX is a pocket-sized scanner that takes the guesswork out of your environment and well-being. It actively verifies the purity, freshness, and elemental safety of what you consume and inhale in seconds—giving your daily life a professional-grade protective shield at an everyday affordable price.</p>
                 
-                <!-- Initial Core Imperative Block Integration -->
                 <div class="hero-mission-callout">
                     <p>Our core imperative goes far beyond financial indicators: <span>we want to eradicate adulteration and microplastics from the intake and democratize safe intake globally.</span></p>
                 </div>
@@ -1249,7 +1245,6 @@
                 </div>
                 
                 <div class="tamsamsom-grid">
-                    <!-- Concentric Chart Render Frame -->
                     <div class="concentric-market-chart">
                         <div class="market-ring ring-tam" id="layer-tam" onclick="updateMarketData('tam')">
                             <span class="ring-tag tag-tam">TAM</span>
@@ -1262,7 +1257,6 @@
                         </div>
                     </div>
 
-                    <!-- Selected Metric Readout Node Panel -->
                     <div class="market-analysis-panel">
                         <div class="active-metric-title" id="m-title"><i data-lucide="pie-chart" style="width: 18px; height: 18px; color: var(--accent-neon);"></i> SOM (Serviceable Obtainable Market)</div>
                         <div class="active-metric-value-wrapper">
@@ -1385,13 +1379,11 @@
 
         let currentAudienceState = 'consumer';
 
-        // Fixes the Navigation Error to make Home always return seamlessly to the top
         function navigateToTop() {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
-            // Optional: If you want to explicitly reset back to the default general pitch when hitting home
             switchAudience('consumer');
         }
 
@@ -1430,9 +1422,6 @@
         function triggerInvestorPortalFlow() {
             switchAudience('investor');
             document.getElementById('economics-section').scrollIntoView({ behavior: 'smooth' });
-            setTimeout(() => {
-                openModal('investor');
-            }, 600);
         }
 
         function updateMarketData(key) {
@@ -1451,19 +1440,26 @@
             document.getElementById(`layer-${key}`).classList.add('active-layer');
         }
 
-        function handleCtaAction() { openModal(currentAudienceState); }
+        // Bypasses the modal entirely if the current presentation state is 'investor'
+        function handleCtaAction() { 
+            if (currentAudienceState === 'investor') {
+                document.getElementById('economics-section').scrollIntoView({ behavior: 'smooth' });
+            } else {
+                openModal(currentAudienceState); 
+            }
+        }
 
         function openModal(type) {
+            // Guard statement to stop the modal setup from image_ef11c9.png from executing
+            if (type === 'investor') return;
+
             const modal = document.getElementById('contact-modal');
             const title = document.getElementById('modal-title');
             const desc = document.getElementById('modal-desc');
             
             modal.style.display = 'flex';
 
-            if(type === 'investor') {
-                title.innerText = "Request Founder Pitch Deck & Financial Models";
-                desc.innerText = "Gain secure access to our architectural briefs, seed round parameters, manufacturing scaling models, and functional multi-vector data pipelines.";
-            } else if(type === 'innovation') {
+            if(type === 'innovation') {
                 title.innerText = "Request Technical Specifications & Whitepaper";
                 desc.innerText = "Review our structural core SDK layers, modular sensor integration paths (Air/EMI/Smell), and machine learning engine datasets.";
             } else {
