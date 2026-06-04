@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KWIX | Handheld Molecular Scanner for Total Intake Intelligence</title>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJM0Y63BW2"></script>
     <script>
@@ -11,9 +15,6 @@
       gtag('config', 'G-YJM0Y63BW2');
     </script>
     
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KWIX | Handheld Molecular Scanner for Total Intake Intelligence</title>
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
     <style>
         :root {
@@ -38,11 +39,23 @@
             scroll-behavior: smooth;
         }
 
+        /* --- GLOBAL CONTENT PROTECTION STYLES --- */
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
+            -webkit-user-select: none;  /* Safari */
+            -moz-user-select: none;     /* Firefox */
+            -ms-user-select: none;      /* IE10+/Edge */
+            user-select: none;          /* Standard */
+        }
+
+        /* Completely blanks out the screen if someone tries to Print or Save as PDF */
+        @media print {
+            body {
+                display: none !important;
+            }
         }
 
         /* Technical Grid Overlay */
@@ -1269,8 +1282,11 @@
 
     <nav>
         <div class="logo-container">
-            <div class="brand-mark-frame" style="cursor: pointer;" onclick="navigateToTop()">
-                <img src="kwix-logo.jpeg" alt="KWIX Architecture" class="brand-logo-image-file" />
+            <!-- PROTECTED LOGO WRAPPER -->
+            <div class="brand-mark-frame" style="cursor: pointer; position: relative;" onclick="navigateToTop()">
+                <img src="kwix-logo.jpeg" alt="KWIX Architecture" class="brand-logo-image-file" draggable="false" />
+                <!-- Transparent blocker layer -->
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; z-index: 10;"></div>
             </div>
             <div class="core-badge">Edge Intelligence Module</div>
         </div>
@@ -1380,8 +1396,11 @@
                 <div class="founder-card">
                     <div class="founder-header">
                         <div class="founder-identity-wrapper">
-                            <div class="founder-avatar-frame">
-                                <img src="deepa_pro.jpg" alt="Deepa P. Sketch Profile" class="founder-avatar-img" />
+                            <!-- PROTECTED FOUNDER AVATAR WRAPPER -->
+                            <div class="founder-avatar-frame" style="position: relative;">
+                                <img src="deepa_pro.jpg" alt="Deepa P. Sketch Profile" class="founder-avatar-img" draggable="false" />
+                                <!-- Transparent blocker layer -->
+                                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; z-index: 10;"></div>
                             </div>
                             <div class="founder-identity">
                                 <h4>Deepa P.</h4>
@@ -1653,6 +1672,37 @@
     <footer>
         <p>&copy; 2026 KWIX INC. Contact: <a href="javascript:void(0)" onclick="openModal('consumer')">briefing@twix.life</a></p>
     </footer>
+
+    <!-- --- GLOBAL SCRIPT INTERCEPTORS FOR REPLICATIVE PROTECTION --- -->
+    <script>
+        // 1. Disable Right-Click Context Menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // 2. Terminate Keyboard Extractions (Copy, Save, Document Inspection)
+        document.addEventListener('keydown', function(e) {
+            // Block Ctrl+C / Cmd+C (Copy)
+            if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
+                e.preventDefault();
+            }
+            // Block Ctrl+S / Cmd+S (Save Markup Dom)
+            if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                e.preventDefault();
+            }
+            // Block F12 (Inspect Panel) & Ctrl+Shift+I / Cmd+Option+I (DevTools System Engine)
+            if (e.key === 'F12' || ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'I')) {
+                e.preventDefault();
+            }
+        });
+
+        // 3. Prevent Drag and Drop Image Extraction
+        document.addEventListener('dragstart', function(e) {
+            if (e.target.nodeName === 'IMG') {
+                e.preventDefault();
+            }
+        });
+    </script>
 
     <script>
         lucide.createIcons();
