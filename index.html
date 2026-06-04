@@ -585,10 +585,9 @@
 
         /* About Section */
         .about-section {
-            padding: 5rem 5%;
-            background: linear-gradient(180deg, var(--bg-dark) 0%, #060B18 50%, var(--bg-dark) 100%);
+            padding: 5rem 5% 2.5rem 5%;
+            background: linear-gradient(180deg, var(--bg-dark) 0%, #060B18 100%);
             border-top: 1px solid rgba(255, 255, 255, 0.03);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
         }
 
         .about-container {
@@ -626,6 +625,221 @@
         .about-body p.muted-para {
             font-size: 0.95rem;
             color: var(--text-muted);
+        }
+
+        /* Founders Showcase Module */
+        .founders-section {
+            padding: 0 5% 3rem 5%;
+            background: #060B18;
+        }
+
+        .founders-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .founder-card {
+            background: var(--surface-card);
+            border: 1px solid rgba(0, 210, 255, 0.1);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .founder-card:hover {
+            border-color: var(--accent-neon);
+            box-shadow: 0 15px 35px rgba(0, 245, 160, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .founder-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: linear-gradient(to bottom, var(--accent-neon), var(--accent-cyan));
+        }
+
+        .founder-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+        }
+
+        .founder-identity-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        .founder-avatar-frame {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-cyan);
+            overflow: hidden;
+            background: #02050a;
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
+            flex-shrink: 0;
+        }
+
+        .founder-avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            filter: brightness(0.9) contrast(1.1);
+        }
+
+        .founder-identity h4 {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
+        }
+
+        .founder-identity .title-badge {
+            font-size: 0.75rem;
+            color: var(--accent-cyan);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 2px;
+            display: inline-block;
+        }
+
+        .founder-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 245, 160, 0.05);
+            border: 1px solid rgba(0, 245, 160, 0.2);
+            color: var(--accent-neon);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .founder-bio {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .founder-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .founder-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-main);
+            padding: 4px 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Advisors Section Layout */
+        .advisors-section {
+            padding: 2rem 5% 5rem 5%;
+            background: linear-gradient(180deg, #060B18 0%, var(--bg-dark) 100%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .advisors-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .advisors-title h3 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .advisors-title h2 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            margin-bottom: 2rem;
+        }
+
+        .advisors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .advisor-card {
+            background: rgba(17, 26, 46, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 1.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .advisor-card:hover {
+            border-color: rgba(0, 210, 255, 0.25);
+            background: rgba(17, 26, 46, 0.7);
+        }
+
+        .advisor-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .advisor-icon-box {
+            width: 42px;
+            height: 42px;
+            background: rgba(0, 210, 255, 0.05);
+            border: 1px solid rgba(0, 210, 255, 0.15);
+            color: var(--accent-cyan);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .advisor-info h4 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        .advisor-info .advisor-role {
+            font-size: 0.75rem;
+            color: var(--accent-neon);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .advisor-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.5;
         }
 
         /* Topology Map Blueprint */
@@ -681,7 +895,7 @@
             height: 70px;
             display: flex;
             justify-content: center;
-            }
+        }
 
         .vector-pipe-container svg { width: 100%; height: 100%; max-width: 1100px; }
 
@@ -1027,6 +1241,8 @@
             .cta-group { flex-direction: column; align-items: stretch; }
             .node-status { border-left: none; border-top: 1px solid rgba(0, 212, 255, 0.15); padding-top: 1rem; }
             .about-container { grid-template-columns: 1fr; }
+            .founders-grid { grid-template-columns: 1fr; }
+            .advisors-grid { grid-template-columns: 1fr; }
             .topology-layer { flex-direction: column; align-items: center; }
             .vector-pipe-container { display: none; }
             .tamsamsom-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -1143,6 +1359,126 @@
             <div class="about-body">
                 <p>We are a highly integrated team of founders combining proven domain expertise across **embedded systems, product design, cloud compute, AI, hardware, chemical analysis, and environmental research background**. By shrinking large laboratory analytical tools into a pocket-sized mobile device, we bridge the gap between hard system architecture and proactive life protection.</p>
                 <p class="muted-para">Our architecture is built for continuous expansion. While launching with foundational food safety signatures, the KWIX hardware roadmap scales into a complete environmental shield—integrating advanced array extensions for air quality telemetry, EMI radiation tracking, complex smell profiling, and comprehensive particulate pollution vectors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dedicated Founders Section -->
+    <section class="founders-section">
+        <div class="founders-container">
+            <div class="founders-grid">
+                <div class="founder-card">
+                    <div class="founder-header">
+                        <div class="founder-identity-wrapper">
+                            <div class="founder-avatar-frame">
+                                <img src="deepa_pro.jpg" alt="Deepa P. Sketch Profile" class="founder-avatar-img" />
+                            </div>
+                            <div class="founder-identity">
+                                <h4>Deepa P.</h4>
+                                <span class="title-badge">Founder</span>
+                            </div>
+                        </div>
+                        <div class="founder-icon">
+                            <i data-lucide="cpu" style="width: 20px; height: 20px;"></i>
+                        </div>
+                    </div>
+                    <p class="founder-bio">A serial entrepreneur deeply passionate about democratizing quality intake for everyone. She drives the localization layer of our system architecture, bringing deep expertise in localized AI-driven sentiment captures to align real-world environmental exposure with human safety metrics.</p>
+                    <div class="founder-tags">
+                        <span class="founder-tag">Serial Entrepreneur</span>
+                        <span class="founder-tag">Localized AI</span>
+                        <span class="founder-tag">Intake Democratization</span>
+                    </div>
+                </div>
+                
+                <div class="founder-card">
+                    <div class="founder-header">
+                        <div class="founder-identity">
+                            <h4>Engineering Desk</h4>
+                            <span class="title-badge">Systems Architecture</span>
+                        </div>
+                        <div class="founder-icon">
+                            <i data-lucide="layers" style="width: 20px; height: 20px;"></i>
+                        </div>
+                    </div>
+                    <p class="founder-bio">Directs hard embedded systems, multi-wavelength spectroscopy alignment, and edge compute micro-architecture. Translates heavy lab analytics into ultra-compact, low-cost consumer silicon infrastructure.</p>
+                    <div class="founder-tags">
+                        <span class="founder-tag">Embedded Systems</span>
+                        <span class="founder-tag">Sensor Fusion</span>
+                        <span class="founder-tag">Edge Processing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advisory Board Section -->
+    <section class="advisors-section">
+        <div class="advisors-container">
+            <div class="advisors-title">
+                <h3>Strategic Guidance</h3>
+                <h2>Advisory Board</h2>
+            </div>
+            <div class="advisors-grid">
+                <div class="advisor-card">
+                    <div class="advisor-header">
+                        <div class="advisor-icon-box">
+                            <i data-lucide="flask-conical" style="width: 18px; height: 18px;"></i>
+                        </div>
+                        <div class="advisor-info">
+                            <h4>Food Research</h4>
+                            <div class="advisor-role">Advisory Council</div>
+                        </div>
+                    </div>
+                    <p class="advisor-desc">Guiding molecular tracking signatures, validation baselines, and food purity benchmarks to map out hidden contaminants.</p>
+                </div>
+                <div class="advisor-card">
+                    <div class="advisor-header">
+                        <div class="advisor-icon-box">
+                            <i data-lucide="apple" style="width: 18px; height: 18px;"></i>
+                        </div>
+                        <div class="advisor-info">
+                            <h4>Nutrients Desk</h4>
+                            <div class="advisor-role">Advisory Council</div>
+                        </div>
+                    </div>
+                    <p class="advisor-desc">Advising on nutrient density tracking algorithms, bio-availability scores, and dietary intake profiling strategies.</p>
+                </div>
+                <div class="advisor-card">
+                    <div class="advisor-header">
+                        <div class="advisor-icon-box">
+                            <i data-lucide="cpu" style="width: 18px; height: 18px;"></i>
+                        </div>
+                        <div class="advisor-info">
+                            <h4>Sensor Systems</h4>
+                            <div class="advisor-role">Advisory Council</div>
+                        </div>
+                    </div>
+                    <p class="advisor-desc">Optimizing solid-state spectral array components, micro-optics, and cross-channel sensor calibration metrics.</p>
+                </div>
+                <div class="advisor-card">
+                    <div class="advisor-header">
+                        <div class="advisor-icon-box">
+                            <i data-lucide="rocket" style="width: 18px; height: 18px;"></i>
+                        </div>
+                        <div class="advisor-info">
+                            <h4>AI Scaling Desk</h4>
+                            <div class="advisor-role">Advisory Council</div>
+                        </div>
+                    </div>
+                    <p class="advisor-desc">Directing edge matrix deployment pipelines, automated model retraining, and worldwide neural grid expansion networks.</p>
+                </div>
+                <div class="advisor-card">
+                    <div class="advisor-header">
+                        <div class="advisor-icon-box">
+                            <i data-lucide="globe" style="width: 18px; height: 18px;"></i>
+                        </div>
+                        <div class="advisor-info">
+                            <h4>Global Ops / Finance</h4>
+                            <div class="advisor-role">Advisory Council</div>
+                        </div>
+                    </div>
+                    <p class="advisor-desc">Structuring cross-border hardware supply chains, international trade compliance, and optimizing consumer unit economics for global distribution.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1440,7 +1776,6 @@
             document.getElementById(`layer-${key}`).classList.add('active-layer');
         }
 
-        // Bypasses the modal entirely if the current presentation state is 'investor'
         function handleCtaAction() { 
             if (currentAudienceState === 'investor') {
                 document.getElementById('economics-section').scrollIntoView({ behavior: 'smooth' });
@@ -1450,7 +1785,6 @@
         }
 
         function openModal(type) {
-            // Guard statement to stop the modal setup from image_ef11c9.png from executing
             if (type === 'investor') return;
 
             const modal = document.getElementById('contact-modal');
