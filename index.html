@@ -5,52 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>KWIX | Handheld Molecular Scanner for Total Intake Intelligence</title>
-    <meta name="description" content="KWIX is a pocket-sized molecular scanner verifying the purity, freshness, and safety of food, air, and your environment using edge AI and multi-spectral spectroscopy.">
-    <meta name="keywords" content="molecular scanner, handheld spectroscopy, food safety detector, edge AI sensor, microplastic scanner, environmental health tracker, KWIX">
+    <meta name="description" content="KWIX is a pocket-sized molecular scanner verifying the purity, freshness, and safety of food, air, and your environment using Physical AI.">
+    <meta name="keywords" content="molecular scanner, handheld spectroscopy, food safety detector, Physical AI sensor, microplastic scanner, health matrix, KWIX">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://kwix.life/">
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kwix.life/">
-    <meta property="og:title" content="KWIX | Handheld Molecular Scanner for Total Intake Intelligence">
-    <meta property="og:description" content="Eradicating adulteration and microplastics. Scan your food and environment for instant, lab-grade safety metrics with a pocket-sized edge AI scanner.">
-    <meta property="og:image" content="https://kwix.life/kwix-logo.jpeg">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://kwix.life/">
-    <meta name="twitter:title" content="KWIX | Handheld Molecular Scanner for Total Intake Intelligence">
-    <meta name="twitter:description" content="Eradicating adulteration and microplastics. Scan your food and environment for instant, lab-grade safety metrics with a pocket-sized edge AI scanner.">
-    <meta name="twitter:image" content="https://kwix.life/kwix-logo.jpeg">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "KWIX Molecular Scanner",
-      "image": "https://kwix.life/kwix-logo.jpeg",
-      "description": "A pocket-sized molecular scanner that actively verifies the purity, freshness, and elemental safety of what you consume and inhale using edge AI and sensor fusion.",
-      "brand": {
-        "@type": "Brand",
-        "name": "KWIX"
-      },
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "price": "40.00",
-        "availability": "https://schema.org/PreOrder"
-      }
-    }
-    </script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJM0Y63BW2"></script>
+    <!-- Google Analytics Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H145P836GG"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
-      gtag('config', 'G-YJM0Y63BW2');
+      gtag('config', 'G-H145P836GG');
     </script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
     <style>
         :root {
@@ -71,30 +39,13 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* --- GLOBAL CONTENT PROTECTION STYLES --- */
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
-            -webkit-user-select: none;  /* Safari */
-            -moz-user-select: none;     /* Firefox */
-            -ms-user-select: none;      /* IE10+/Edge */
-            user-select: none;          /* Standard */
         }
 
-        /* Completely blanks out the screen if someone tries to Print or Save as PDF */
-        @media print {
-            body {
-                display: none !important;
-            }
-        }
-
-        /* Technical Grid Overlay */
         .tech-bg {
             position: absolute;
             top: 0;
@@ -108,7 +59,6 @@
             z-index: 0;
         }
 
-        /* Navigation */
         nav {
             display: flex;
             justify-content: space-between;
@@ -121,59 +71,28 @@
             top: 0;
             z-index: 100;
             border-bottom: 1px solid rgba(0, 210, 255, 0.08);
-            gap: 1rem;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
             gap: 0.8rem;
-            flex-wrap: wrap;
         }
 
         .brand-mark-frame {
-            position: relative;
-            width: 155px;
-            height: 48px;
-            background: #02050a;
-            border: 1px solid rgba(0, 210, 255, 0.25);
-            padding: 4px;
-            overflow: hidden;
             display: flex;
             align-items: center;
-            justify-content: center;
-            transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
-            border-radius: 4px;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #FFFFFF;
+            letter-spacing: -0.03em;
+            text-transform: uppercase;
+            text-decoration: none;
         }
 
-        .brand-logo-image-file {
-            width: 100%;
-            height: 100%;
-            object-fit: scale-down;
-            filter: contrast(1.15) brightness(1.1);
-            mix-blend-mode: screen;
-        }
-
-        .brand-mark-frame::after {
-            content: '';
-            position: absolute;
-            top: -100%; 
-            left: 0; 
-            width: 100%; 
-            height: 60%;
-            background: linear-gradient(to bottom, transparent, rgba(0, 245, 160, 0.25), transparent);
-            animation: scan 4s ease-in-out infinite;
-        }
-
-        @keyframes scan { 
-            0% { top: -100%; } 
-            100% { top: 150%; } 
-        }
-
-        .brand-mark-frame:hover {
-            border-color: var(--accent-neon);
-            box-shadow: 0 0 30px rgba(0, 245, 160, 0.25);
-            transform: scale(1.03);
+        .brand-mark-frame span {
+            color: var(--accent-neon);
+            margin-left: 1px;
         }
 
         .core-badge {
@@ -185,8 +104,6 @@
             border-radius: 4px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            white-space: nowrap;
         }
 
         .nav-links {
@@ -200,50 +117,19 @@
             text-decoration: none;
             font-size: 0.85rem;
             font-weight: 500;
-            letter-spacing: 0.5px;
             transition: color 0.3s;
-            cursor: pointer;
         }
 
         .nav-link:hover {
             color: var(--accent-cyan);
         }
 
-        .nav-link-home {
-            color: var(--accent-neon);
-            font-weight: 700;
-        }
-
-        .btn-deck {
-            border: 1px solid var(--accent-cyan);
-            color: var(--accent-cyan) !important;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            font-size: 0.8rem !important;
-            background: rgba(0, 210, 255, 0.03);
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-            display: inline-block;
-            cursor: pointer;
-        }
-
-        .btn-deck:hover {
-            background: rgba(0, 210, 255, 0.1);
-            color: var(--text-main) !important;
-            box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
-        }
-
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 9rem 5% 5rem 5%;
+            padding: 8rem 5% 4rem 5%;
             position: relative;
             background: radial-gradient(circle at 80% 25%, rgba(0, 210, 255, 0.15), transparent 50%),
                         radial-gradient(circle at 20% 75%, rgba(0, 245, 160, 0.12), transparent 50%);
@@ -253,18 +139,17 @@
             width: 100%;
             max-width: 1200px;
             display: grid;
-            grid-template-columns: 1.25fr 0.75fr;
+            grid-template-columns: 1.2fr 0.8fr;
             gap: 4rem;
             align-items: center;
             z-index: 1;
         }
 
         .hero-text h1 {
-            font-size: clamp(2.3rem, 4.5vw, 3.8rem);
-            line-height: 1.15;
+            font-size: clamp(2.3rem, 4.5vw, 3.5rem);
+            line-height: 1.2;
             margin-bottom: 1.5rem;
             font-weight: 900;
-            letter-spacing: -1px;
         }
 
         .hero-text h1 span {
@@ -275,10 +160,10 @@
 
         .tagline-highlight {
             display: block;
-            font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+            font-size: 1rem;
             color: var(--accent-neon);
             font-weight: 700;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
             margin-bottom: 1rem;
             text-transform: uppercase;
         }
@@ -286,30 +171,8 @@
         .hero-text p {
             font-size: clamp(1rem, 1.4vw, 1.15rem);
             color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            max-width: 720px;
-            line-height: 1.65;
-        }
-
-        .hero-mission-callout {
-            border-left: 3px solid var(--accent-neon);
-            background: rgba(0, 245, 160, 0.03);
-            padding: 0.8rem 1.2rem;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 2.5rem;
-            max-width: 720px;
-        }
-
-        .hero-mission-callout p {
-            font-size: 0.95rem;
-            color: var(--text-main);
-            margin-bottom: 0;
-            line-height: 1.5;
-        }
-
-        .hero-mission-callout p span {
-            color: var(--accent-neon);
-            font-weight: 700;
+            margin-bottom: 2rem;
+            line-height: 1.7;
         }
 
         .cta-group {
@@ -326,13 +189,11 @@
             border-radius: 6px;
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1px;
             text-decoration: none;
             box-shadow: 0 4px 25px rgba(0, 245, 160, 0.35);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            text-align: center;
-            cursor: pointer;
+            transition: all 0.3s ease;
             border: none;
+            cursor: pointer;
         }
 
         .btn-primary:hover {
@@ -340,66 +201,20 @@
             box-shadow: 0 8px 30px rgba(0, 245, 160, 0.5);
         }
 
-        .node-status {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            border-left: 2px solid rgba(0, 212, 255, 0.3);
-            padding-left: 1.2rem;
-        }
-
-        .node-status strong {
-            color: var(--accent-neon);
-            display: block;
-            font-size: 1.25rem;
-            letter-spacing: 0.5px;
-            margin-top: 4px;
-            text-transform: uppercase;
-            font-weight: 800;
-        }
-
-        /* Handheld Device Visualization */
         .node-visualization {
             background: radial-gradient(circle at center, var(--surface-dark) 0%, var(--bg-dark) 100%);
             border: 1px solid rgba(0, 212, 255, 0.18);
-            height: 560px;
+            padding: 3rem;
             border-radius: 24px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            position: relative;
             box-shadow: 0 40px 80px rgba(0, 0, 0, 0.7);
-            width: 100%;
-            max-width: 440px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .matrix-mesh {
-            position: absolute;
-            width: 90%;
-            height: 90%;
-            border: 1px dashed rgba(0, 245, 160, 0.08);
-            border-radius: 50%;
-            animation: spin 50s linear infinite;
-            top: 5%;
-        }
-
-        @keyframes spin { 100% { transform: rotate(360deg); } }
-
-        .device-render-box {
-            position: relative;
-            width: 100%;
-            height: 360px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
         }
 
         .handheld-device {
-            width: 130px;
-            height: 250px;
+            width: 140px;
+            height: 260px;
             background: linear-gradient(165deg, #1E293B 0%, #0F172A 40%, #020617 100%);
             border-radius: 28px;
             border: 2px solid rgba(0, 210, 255, 0.3);
@@ -407,33 +222,14 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            padding: 1.2rem 1rem;
-            z-index: 2;
-            position: relative;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 
-                        inset 0 2px 4px rgba(255,255,255,0.1),
-                        0 0 35px rgba(0, 212, 255, 0.2);
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .handheld-device:hover {
-            transform: translateY(-8px) rotate(2deg);
-            border-color: var(--accent-neon);
-            box-shadow: 0 35px 60px rgba(0, 0, 0, 0.9), 
-                        inset 0 2px 6px rgba(255,255,255,0.15),
-                        0 0 45px rgba(0, 245, 160, 0.35);
-        }
-
-        .device-top-grid {
-            width: 30px;
-            height: 3px;
-            background: rgba(255, 255, 255, 0.15);
-            border-radius: 2px;
+            padding: 1.5rem 1rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 35px rgba(0, 212, 255, 0.2);
         }
 
         .oled-display {
-            width: 84px;
-            height: 84px;
+            width: 90px;
+            height: 90px;
             border-radius: 50%;
             background: #020617;
             border: 2px solid rgba(0, 210, 255, 0.4);
@@ -441,807 +237,70 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            position: relative;
-            overflow: hidden;
-            box-shadow: inset 0 0 12px rgba(0, 210, 255, 0.4);
-        }
-
-        .oled-data-ring {
-            position: absolute;
-            width: 72px;
-            height: 72px;
-            border: 1px dashed var(--accent-neon);
-            border-radius: 50%;
-            opacity: 0.5;
-            animation: spin 12s linear infinite;
         }
 
         .oled-status-text {
-            font-family: monospace;
-            font-size: 0.5rem;
+            font-size: 0.55rem;
             color: var(--accent-neon);
-            letter-spacing: 1px;
-            text-transform: uppercase;
             font-weight: 700;
-            z-index: 2;
-            text-shadow: 0 0 4px rgba(0, 245, 160, 0.6);
+            letter-spacing: 1px;
         }
 
         .oled-metric-value {
-            font-family: monospace;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             color: #FFFFFF;
-            font-weight: 900;
-            margin-top: 1px;
-            z-index: 2;
-        }
-
-        .device-grip-lines {
-            display: flex;
-            gap: 3px;
-        }
-
-        .grip-bar {
-            width: 10px;
-            height: 2px;
-            background: rgba(0, 212, 255, 0.25);
-            border-radius: 1px;
+            font-weight: 800;
         }
 
         .molecular-aperture-casing {
-            width: 96px;
-            height: 64px;
+            width: 100px;
+            height: 50px;
             background: #030712;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            padding: 4px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-        }
-
-        .lens-ring {
-            width: 40px;
-            height: 40px;
-            background: #02040a;
-            border-radius: 50%;
-            border: 2px solid var(--accent-cyan);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 12px rgba(0, 210, 255, 0.3);
-            position: relative;
         }
 
         .laser-emitter-node {
-            width: 10px;
-            height: 10px;
+            width: 12px;
+            height: 12px;
             background: var(--accent-neon);
             border-radius: 50%;
-            box-shadow: 0 0 12px var(--accent-neon), 0 0 20px var(--accent-neon);
-            animation: pulseAperture 2s infinite;
+            box-shadow: 0 0 15px var(--accent-neon);
         }
 
-        .spectral-array-dots {
-            position: absolute;
-            right: 10px;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .spectral-dot {
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background: #A855F7;
-            box-shadow: 0 0 5px #A855F7;
-        }
-        .spectral-dot.cyan { background: var(--accent-cyan); box-shadow: 0 0 5px var(--accent-cyan); }
-
-        @keyframes pulseAperture {
-            0% { transform: scale(0.9); opacity: 0.7; }
-            50% { transform: scale(1.1); opacity: 1; filter: brightness(1.2); }
-            100% { transform: scale(0.9); opacity: 0.7; }
-        }
-
-        .scanning-beam-ray {
-            position: absolute;
-            bottom: -5px;
-            width: 140px;
-            height: 45px;
-            background: linear-gradient(to bottom, rgba(0, 245, 160, 0.35), transparent);
-            clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
-            z-index: 1;
-            opacity: 0.85;
-            animation: beamPulse 2.5s ease-in-out infinite;
-            transform-origin: top center;
-        }
-
-        @keyframes beamPulse {
-            0%, 100% { opacity: 0.4; transform: scaleX(0.95); }
-            50% { opacity: 0.95; transform: scaleX(1.05); filter: brightness(1.1); }
-        }
-
-        .scanned-object-indicator {
-            position: absolute;
-            bottom: 25px;
-            width: 60px;
-            height: 2px;
-            background: var(--accent-neon);
-            box-shadow: 0 0 12px var(--accent-neon), 0 0 20px var(--accent-neon);
-            animation: targetTrack 2.5s ease-in-out infinite;
-        }
-
-        @keyframes targetTrack {
-            0%, 100% { transform: scaleX(0.8); opacity: 0.6; }
-            50% { transform: scaleX(1.3); opacity: 1; }
-        }
-
-        .device-footer-light {
-            width: 45px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
-            box-shadow: 0 0 6px var(--accent-cyan);
-        }
-
-        .hardware-scale-badge {
-            background: rgba(11, 17, 32, 0.8);
-            border: 1px solid rgba(0, 210, 255, 0.2);
-            padding: 6px 14px;
-            border-radius: 30px;
-            font-size: 0.75rem;
-            color: var(--text-main);
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            font-weight: 700;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .hardware-scale-badge span { color: var(--accent-neon); }
-
-        /* Segmented Navigation Menu Tabs */
-        .audience-tabs-section {
-            background: #070D1E;
-            border-bottom: 1px solid rgba(255,255,255,0.04);
-            padding: 1.5rem 5%;
-        }
-
-        .audience-tabs-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .tab-trigger {
-            background: transparent;
-            border: none;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            padding: 0.5rem 1rem;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .tab-trigger.active {
-            color: var(--accent-cyan);
-            border-bottom-color: var(--accent-cyan);
-        }
-
-        .tab-trigger:hover { color: var(--text-main); }
-
-        /* About Section */
         .about-section {
-            padding: 5rem 5% 2.5rem 5%;
-            background: linear-gradient(180deg, var(--bg-dark) 0%, #060B18 100%);
+            padding: 6rem 5%;
+            background: #060B18;
             border-top: 1px solid rgba(255, 255, 255, 0.03);
         }
 
         .about-container {
-            max-width: 1100px;
+            max-width: 900px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-meta h3 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            color: var(--accent-neon);
-            letter-spacing: 2px;
-            margin-bottom: 0.5rem;
-            font-weight: 800;
-        }
-
-        .about-meta h2 {
-            font-size: clamp(2rem, 3vw, 2.6rem);
-            font-weight: 900;
-            line-height: 1.1;
-            letter-spacing: -1px;
-        }
-
-        .about-body p {
-            font-size: 1.05rem;
-            color: var(--text-main);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .about-body p.muted-para {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        /* Founders Showcase Module */
-        .founders-section {
-            padding: 0 5% 3rem 5%;
-            background: #060B18;
-        }
-
-        .founders-container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .founders-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            margin-top: 2rem;
-        }
-
-        .founder-card {
-            background: var(--surface-card);
-            border: 1px solid rgba(0, 210, 255, 0.1);
-            border-radius: 16px;
-            padding: 2.5rem 2rem;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s ease;
-        }
-
-        .founder-card:hover {
-            border-color: var(--accent-neon);
-            box-shadow: 0 15px 35px rgba(0, 245, 160, 0.1);
-            transform: translateY(-4px);
-        }
-
-        .founder-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 4px; height: 100%;
-            background: linear-gradient(to bottom, var(--accent-neon), var(--accent-cyan));
-        }
-
-        .founder-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-            gap: 1rem;
-        }
-
-        .founder-identity-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-        }
-
-        .founder-avatar-frame {
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            border: 2px solid var(--accent-cyan);
-            overflow: hidden;
-            background: #02050a;
-            box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
-            flex-shrink: 0;
-        }
-
-        .founder-avatar-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center top;
-            filter: brightness(0.9) contrast(1.1);
-        }
-
-        .founder-identity h4 {
-            font-size: 1.4rem;
-            font-weight: 900;
-            color: var(--text-main);
-            letter-spacing: -0.5px;
-        }
-
-        .founder-identity .title-badge {
-            font-size: 0.75rem;
-            color: var(--accent-cyan);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 2px;
-            display: inline-block;
-        }
-
-        .founder-icon {
-            width: 40px;
-            height: 40px;
-            background: rgba(0, 245, 160, 0.05);
-            border: 1px solid rgba(0, 245, 160, 0.2);
-            color: var(--accent-neon);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .founder-bio {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .founder-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .founder-tag {
-            font-size: 0.7rem;
-            font-weight: 700;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            color: var(--text-main);
-            padding: 4px 10px;
-            border-radius: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Advisors Section Layout */
-        .advisors-section {
-            padding: 2rem 5% 5rem 5%;
-            background: linear-gradient(180deg, #060B18 0%, var(--bg-dark) 100%);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-        }
-
-        .advisors-container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .advisors-title h3 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            color: var(--accent-cyan);
-            letter-spacing: 2px;
-            margin-bottom: 0.5rem;
-            font-weight: 800;
-        }
-
-        .advisors-title h2 {
-            font-size: 1.8rem;
-            font-weight: 900;
-            letter-spacing: -0.5px;
-            margin-bottom: 2rem;
-        }
-
-        .advisors-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .advisor-card {
-            background: rgba(17, 26, 46, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            border-radius: 12px;
-            padding: 1.8rem;
-            transition: all 0.3s ease;
-        }
-
-        .advisor-card:hover {
-            border-color: rgba(0, 210, 255, 0.25);
-            background: rgba(17, 26, 46, 0.7);
-        }
-
-        .advisor-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .advisor-icon-box {
-            width: 42px;
-            height: 42px;
-            background: rgba(0, 210, 255, 0.05);
-            border: 1px solid rgba(0, 210, 255, 0.15);
-            color: var(--accent-cyan);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .advisor-info h4 {
-            font-size: 1.1rem;
-            font-weight: 800;
-            color: var(--text-main);
-        }
-
-        .advisor-info .advisor-role {
-            font-size: 0.75rem;
-            color: var(--accent-neon);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .advisor-desc {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-        }
-
-        /* Topology Map Blueprint */
-        .diagram-section {
-            background: linear-gradient(180deg, var(--bg-dark) 0%, var(--surface-dark) 50%, var(--bg-dark) 100%);
-            padding: 5rem 5%;
-        }
-
-        .topology-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .topology-layer {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            width: 100%;
-        }
-
-        .topology-node {
-            background: var(--surface-card);
-            border: 1px solid rgba(0, 210, 255, 0.15);
-            border-radius: 12px;
-            padding: 1.2rem;
             text-align: center;
-            flex: 1;
-            min-width: 240px;
-            max-width: 290px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            transition: border-color 0.3s;
         }
 
-        .topology-node:hover { border-color: var(--accent-neon); }
-        .topology-node h4 { font-size: 1rem; color: var(--text-main); margin-bottom: 0.4rem; font-weight: 800; }
-        .topology-node p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; }
-
-        .plain-explanation {
-            display: block;
-            margin-top: 0.5rem;
-            font-size: 0.75rem;
-            color: var(--accent-neon);
-            font-weight: 600;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            padding-top: 0.4rem;
-        }
-
-        .vector-pipe-container {
-            width: 100%;
-            height: 70px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .vector-pipe-container svg { width: 100%; height: 100%; max-width: 1100px; }
-
-        .pipe-line {
-            stroke: rgba(0, 210, 255, 0.2);
-            stroke-width: 2;
-            stroke-dasharray: 6 4;
-            animation: flow 30s linear infinite;
-        }
-
-        .pipe-line-active {
-            stroke: var(--accent-neon);
-            stroke-width: 2;
-            filter: drop-shadow(0 0 4px var(--accent-neon));
-        }
-
-        @keyframes flow { to { stroke-dashoffset: -20; } }
-
-        .central-hub {
-            background: linear-gradient(145deg, #16223F, #0B1120);
-            border: 2px solid var(--accent-cyan);
-        }
-
-        .database-hub {
-            background: linear-gradient(145deg, #221838, #0F0B1A);
-            border: 2px solid #9D4EDD;
-        }
-        .database-hub h4 { color: #E0AAFF; }
-
-        .output-anchor {
-            background: linear-gradient(145deg, #0B1C24, #05131A);
-            border: 2px solid var(--accent-neon);
-        }
-        .output-anchor h4 { color: var(--accent-neon); filter: var(--glow); }
-
-        /* Economics Banner */
-        .economics-banner {
-            background: radial-gradient(120% 120% at 50% 100%, #0B1528 0%, var(--bg-dark) 100%);
-            border-top: 1px solid rgba(0, 245, 160, 0.1);
-            border-bottom: 1px solid rgba(0, 245, 160, 0.1);
-            padding: 5rem 5%;
-        }
-
-        .econ-wrapper { max-width: 1100px; margin: 0 auto; }
-
-        .econ-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3.5rem;
-        }
-
-        .econ-card {
-            background: rgba(17, 26, 46, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            border-radius: 16px;
-            padding: 2.5rem 1.5rem;
-            position: relative;
-        }
-
-        .econ-card.highlight {
-            border: 1px solid rgba(0, 245, 160, 0.35);
-            background: linear-gradient(180deg, rgba(0, 245, 160, 0.03) 0%, rgba(17, 26, 46, 0.9) 100%);
-        }
-
-        .econ-card.highlight::before {
-            content: 'CORE MODEL';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(90deg, var(--accent-neon), var(--accent-cyan));
-            color: var(--bg-dark);
-            font-size: 0.65rem;
+        .about-container h2 {
+            font-size: 2.5rem;
             font-weight: 900;
-            padding: 4px 14px;
-            border-radius: 20px;
-            letter-spacing: 1px;
-        }
-
-        .econ-metric {
-            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-            font-weight: 900;
-            color: var(--text-main);
-            margin-bottom: 0.8rem;
-        }
-
-        .econ-card.highlight .econ-metric {
-            background: linear-gradient(135deg, var(--accent-neon), #FFFFFF);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .econ-label {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--accent-cyan);
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .econ-card p { color: var(--text-muted); font-size: 0.95rem; }
-
-        /* Interactive TAM SAM SOM Dashboard Container */
-        .tamsamsom-wrapper {
-            margin-top: 3.5rem;
-            background: rgba(11, 22, 44, 0.4);
-            border: 1px solid rgba(0, 210, 255, 0.15);
-            border-radius: 20px;
-            padding: 2.5rem;
-            display: none;
-            animation: fadeIn 0.5s ease-out forwards;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .tamsamsom-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        /* Dedicated Concentric Circles CSS Chart Architecture */
-        .concentric-market-chart {
-            position: relative;
-            width: 100%;
-            height: 380px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .market-ring {
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-            position: relative;
-        }
-
-        .ring-tam {
-            width: 350px;
-            height: 350px;
-            background: rgba(0, 210, 255, 0.03);
-            border: 2px dashed rgba(0, 210, 255, 0.25);
-        }
-        .ring-tam:hover, .ring-tam.active-layer {
-            background: rgba(0, 210, 255, 0.06);
-            border-color: var(--accent-cyan);
-            box-shadow: inset 0 0 20px rgba(0, 210, 255, 0.15);
-        }
-
-        .ring-sam {
-            width: 250px;
-            height: 250px;
-            background: rgba(157, 78, 221, 0.04);
-            border: 2px dashed rgba(157, 78, 221, 0.35);
-        }
-        .ring-sam:hover, .ring-sam.active-layer {
-            background: rgba(157, 78, 221, 0.08);
-            border-color: #E0AAFF;
-            box-shadow: inset 0 0 20px rgba(157, 78, 221, 0.2);
-        }
-
-        .ring-som {
-            width: 150px;
-            height: 150px;
-            background: radial-gradient(circle, rgba(0, 245, 160, 0.2) 0%, rgba(0, 245, 160, 0.05) 100%);
-            border: 2px solid var(--accent-neon);
-        }
-        .ring-som:hover, .ring-som.active-layer {
-            background: rgba(0, 245, 160, 0.25);
-            box-shadow: 0 0 30px rgba(0, 245, 160, 0.35);
-        }
-
-        .ring-tag {
-            font-family: monospace;
-            font-size: 0.75rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-            position: absolute;
-        }
-        .tag-tam { top: 18px; color: var(--accent-cyan); }
-        .tag-sam { top: 18px; color: #E0AAFF; }
-        .tag-som { color: #FFFFFF; text-shadow: 0 0 8px rgba(0, 245, 160, 0.8); }
-
-        /* Metric Detail Display Module */
-        .market-analysis-panel {
-            background: rgba(4, 7, 17, 0.6);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 12px;
-            padding: 1.8rem;
-            min-height: 270px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .active-metric-title {
-            font-size: 1.3rem;
-            font-weight: 800;
-            color: var(--text-main);
-            margin-bottom: 0.3rem;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .active-metric-value-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.2rem;
-        }
-
-        .active-metric-value {
-            font-size: 2.2rem;
-            font-weight: 900;
-            background: linear-gradient(90deg, var(--accent-neon), var(--accent-cyan));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-family: monospace;
-        }
-
-        .active-metric-desc {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .active-metric-anchor {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--accent-cyan);
-            border-top: 1px dashed rgba(255,255,255,0.08);
-            padding-top: 0.8rem;
-            font-weight: 700;
-        }
-
-        /* Features Section Layout */
-        .section { padding: 5rem 5%; max-width: 1200px; margin: 0 auto; }
-        .section-title { text-align: center; margin-bottom: 4rem; }
-        .section-title h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin-bottom: 1.2rem; }
-        .section-title p { color: var(--text-muted); font-size: clamp(1rem, 1.5vw, 1.25rem); max-width: 750px; margin: 0 auto; }
-
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-
-        .tech-card {
-            background-color: var(--surface-dark);
-            border: 1px solid rgba(255, 255, 255, 0.02);
-            padding: 2.5rem 2rem;
-            border-radius: 16px;
-        }
-
-        .tech-card:hover { border-color: rgba(0, 245, 160, 0.4); }
-
-        .card-icon-frame {
-            width: 52px;
-            height: 52px;
-            background: rgba(0, 210, 255, 0.06);
-            border: 1px solid rgba(0, 210, 255, 0.18);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-cyan);
             margin-bottom: 1.5rem;
         }
 
-        .tech-card h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 1rem; }
-        .tech-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
+        .about-container p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
 
-        /* Trust Strip */
         .distributed-banner {
             background: linear-gradient(90deg, rgba(0, 245, 160, 0.02), rgba(0, 212, 255, 0.02));
             border-top: 1px solid rgba(0, 212, 255, 0.12);
             border-bottom: 1px solid rgba(0, 212, 255, 0.12);
-            padding: 3rem 5%;
+            padding: 2.5rem 5%;
         }
 
         .trust-container {
@@ -1253,10 +312,9 @@
             gap: 2rem;
         }
 
-        .trust-item { display: flex; align-items: center; gap: 1rem; font-weight: 700; }
-        .trust-item i { color: var(--accent-neon); filter: var(--glow); }
+        .trust-item { display: flex; align-items: center; gap: 0.8rem; font-weight: 700; }
+        .trust-item i { color: var(--accent-neon); }
 
-        /* Segmented Popup Modals */
         .modal-overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -1276,130 +334,64 @@
             max-width: 500px;
             width: 100%;
             padding: 2.5rem;
-            position: relative;
+            text-align: center;
         }
 
-        .modal-close {
-            position: absolute;
-            top: 1rem; right: 1rem;
-            background: transparent; border: none;
-            color: var(--text-muted); cursor: pointer;
-        }
-
-        .modal-card h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; }
-        .modal-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .modal-card h3 { font-size: 1.6rem; font-weight: 800; margin-bottom: 1rem; }
+        .modal-card p { color: var(--text-muted); margin-bottom: 2rem; }
 
         footer { padding: 4rem 5%; border-top: 1px solid rgba(255, 255, 255, 0.04); text-align: center; color: var(--text-muted); }
         footer a { color: var(--accent-cyan); text-decoration: none; font-weight: 600; }
 
         @media (max-width: 768px) {
-            nav { flex-direction: column; padding: 1rem; }
-            .nav-links { margin: 0.5rem 0; gap: 1rem; }
-            .hero { padding-top: 13rem; }
             .hero-container { grid-template-columns: 1fr; text-align: center; }
-            .cta-group { flex-direction: column; align-items: stretch; }
-            .node-status { border-left: none; border-top: 1px solid rgba(0, 212, 255, 0.15); padding-top: 1rem; }
-            .about-container { grid-template-columns: 1fr; }
-            .founders-grid { grid-template-columns: 1fr; }
-            .advisors-grid { grid-template-columns: 1fr; }
-            .topology-layer { flex-direction: column; align-items: center; }
-            .vector-pipe-container { display: none; }
-            .tamsamsom-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .concentric-market-chart { height: 340px; }
-            .ring-tam { width: 310px; height: 310px; }
-            .ring-sam { width: 220px; height: 220px; }
-            .ring-som { width: 130px; height: 130px; }
+            .cta-group { justify-content: center; }
+            nav { justify-content: center; }
         }
     </style>
 </head>
-<body id="top">
+<body>
 
     <div class="tech-bg"></div>
 
     <header>
         <nav>
             <div class="logo-container">
-                <div class="brand-mark-frame" style="cursor: pointer; position: relative;" onclick="navigateToTop()">
-                    <img src="kwix-logo.jpeg" alt="KWIX Deep-Tech Systems Logo" class="brand-logo-image-file" draggable="false" />
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; z-index: 10;"></div>
-                </div>
-                <div class="core-badge">Edge Intelligence Module</div>
+                <a href="#" class="brand-mark-frame">KWIX<span>.</span></a>
+                <div class="core-badge">Physical AI Module</div>
             </div>
             <div class="nav-links">
-                <a onclick="navigateToTop()" class="nav-link nav-link-home">Home</a>
-                <a href="#about" class="nav-link">Team</a>
-                <a href="#pipeline" class="nav-link">DAG</a>
-                <a href="#features" class="nav-link">Features</a>
-            </div>
-            <div>
-                <button class="btn-deck" onclick="triggerInvestorPortalFlow()">Investor Portal</button>
+                <a href="#about" class="nav-link">Our Innovation</a>
             </div>
         </nav>
     </header>
-
-    <div class="audience-tabs-section">
-        <div class="audience-tabs-container">
-            <button class="tab-trigger active" id="tab-consumer" onclick="switchAudience('consumer')">General Public Pitch</button>
-            <button class="tab-trigger" id="tab-innovation" onclick="switchAudience('innovation')">Innovation Pitch</button>
-            <button class="tab-trigger" id="tab-investor" onclick="switchAudience('investor')">Investor Pitch</button>
-        </div>
-    </div>
 
     <main>
         <section class="hero">
             <div class="hero-container">
                 <div class="hero-text">
-                    <span class="tagline-highlight" id="hero-tagline">Know what you take, shape what you are</span>
-                    <h1 id="hero-title">Scan Your Intake. <br><span>Instant Lab-Grade Safety at Pocket.</span></h1>
+                    <span class="tagline-highlight">Beyond Bio-Tracking Markers</span>
+                    <h1>Innovating <span>Beyond Fitness Bands</span> to Map Complete Intake.</h1>
                     
-                    <p id="hero-desc">KWIX is a pocket-sized scanner that takes the guesswork out of your environment and well-being. It actively verifies the purity, freshness, and elemental safety of what you consume and inhale in seconds—giving your daily life a professional-grade protective shield at an everyday affordable price.</p>
+                    <p>Traditional wearables only track what your body does after the fact. KWIX introduces a preventative paradigm shift: using advanced **Physical AI**, we actively map your entire material and chemical intake *before* it enters your body—converting environmental inputs straight into your personal health matrix.</p>
                     
-                    <div class="hero-mission-callout">
-                        <p>Our core imperative goes far beyond financial indicators: <span>we want to eradicate adulteration and microplastics from the intake and democratize safe intake globally.</span></p>
-                    </div>
-
                     <div class="cta-group">
-                        <button class="btn-primary" id="hero-cta" onclick="handleCtaAction()">Get Early Prototype Access</button>
-                        <div class="node-status">
-                            Device Validation
-                            <strong id="node-badge">Consumer Edition</strong>
-                        </div>
+                        <button class="btn-primary" onclick="openModal()">Get Early Prototype Access</button>
                     </div>
                 </div>
                 
                 <div class="node-visualization">
-                    <div class="matrix-mesh"></div>
-                    <div class="device-render-box">
-                        <div class="handheld-device">
-                            <div class="device-top-grid"></div>
-                            <div class="oled-display">
-                                <div class="oled-data-ring"></div>
-                                <span class="oled-status-text" id="hud-status">ANALYZING</span>
-                                <span class="oled-metric-value" id="hud-value">98.4% PURE</span>
-                            </div>
-                            <div class="device-grip-lines">
-                                <div class="grip-bar"></div>
-                                <div class="grip-bar"></div>
-                                <div class="grip-bar"></div>
-                            </div>
-                            <div class="molecular-aperture-casing">
-                                <div class="lens-ring">
-                                    <div class="laser-emitter-node"></div>
-                                </div>
-                                <div class="spectral-array-dots">
-                                    <div class="spectral-dot"></div>
-                                    <div class="spectral-dot cyan"></div>
-                                    <div class="spectral-dot"></div>
-                                </div>
-                            </div>
-                            <div class="device-footer-light"></div>
+                    <div class="handheld-device">
+                        <div class="oled-display">
+                            <span class="oled-status-text">INTELLIGENCE</span>
+                            <span class="oled-metric-value">INTEGRATED</span>
                         </div>
-                        <div class="scanning-beam-ray"></div>
-                        <div class="scanned-object-indicator"></div>
+                        <div class="molecular-aperture-casing">
+                            <div class="laser-emitter-node"></div>
+                        </div>
                     </div>
-                    <div class="hardware-scale-badge">
-                        <i data-lucide="maximize-2" style="width: 14px; height: 14px;"></i>
-                        Scale: <span>Tiny Handheld Form Factor</span>
+                    <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
+                        KWIX Physical AI SENSOR
                     </div>
                 </div>
             </div>
@@ -1407,501 +399,37 @@
 
         <section class="distributed-banner">
             <div class="trust-container">
-                <div class="trust-item"><i data-lucide="check-circle-2"></i> Sensor Fusion Engine</div>
-                <div class="trust-item"><i data-lucide="shield-check"></i> Comprehensive Intake Intelligence</div>
-                <div class="trust-item"><i data-lucide="refresh-cw"></i> 1-Year Instant Replacement Warranty</div>
+                <div class="trust-item"><i data-lucide="shield-check"></i> Complete Intake Mapping</div>
+                <div class="trust-item"><i data-lucide="activity"></i> Adaptive Physical AI Engine</div>
+                <div class="trust-item"><i data-lucide="heart"></i> Direct Health Matrix Integration</div>
             </div>
         </section>
 
         <section class="about-section" id="about">
             <div class="about-container">
-                <div class="about-meta">
-                    <h3>Our Background</h3>
-                    <h2>Deep-Tech Domain Innovators</h2>
-                </div>
-                <div class="about-body">
-                    <p>We are a highly integrated team of founders combining proven domain expertise across **embedded systems, product design, cloud compute, AI, hardware, chemical analysis, and environmental research background**. By shrinking large laboratory analytical tools into a pocket-sized mobile device, we bridge the gap between hard system architecture and proactive life protection.</p>
-                    <p class="muted-para">Our architecture is built for continuous expansion. While launching with foundational food safety signatures, the KWIX hardware roadmap scales into a complete environmental shield—integrating advanced array extensions for air quality telemetry, EMI radiation tracking, complex smell profiling, and comprehensive particulate pollution vectors.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="founders-section">
-            <div class="founders-container">
-                <div class="founders-grid">
-                    <div class="founder-card">
-                        <div class="founder-header">
-                            <div class="founder-identity-wrapper">
-                                <div class="founder-avatar-frame" style="position: relative;">
-                                    <img src="deepa_pro.jpg" alt="Deepa P. - KWIX Co-founder and Localized AI Systems Lead" class="founder-avatar-img" draggable="false" />
-                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; z-index: 10;"></div>
-                                </div>
-                                <div class="founder-identity">
-                                    <h4>Deepa P.</h4>
-                                    <span class="title-badge">Founder</span>
-                                </div>
-                            </div>
-                            <div class="founder-icon">
-                                <i data-lucide="cpu" style="width: 20px; height: 20px;"></i>
-                            </div>
-                        </div>
-                        <p class="founder-bio">A serial entrepreneur deeply passionate about democratizing quality intake for everyone. She drives the localization layer of our system architecture, bringing deep expertise in localized AI-driven sentiment captures to align real-world environmental exposure with human safety metrics.</p>
-                        <div class="founder-tags">
-                            <span class="founder-tag">Serial Entrepreneur</span>
-                            <span class="founder-tag">Localized AI</span>
-                            <span class="founder-tag">Intake Democratization</span>
-                        </div>
-                    </div>
-                    
-                    <div class="founder-card">
-                        <div class="founder-header">
-                            <div class="founder-identity">
-                                <h4>Engineering Desk</h4>
-                                <span class="title-badge">Systems Architecture</span>
-                            </div>
-                            <div class="founder-icon">
-                                <i data-lucide="layers" style="width: 20px; height: 20px;"></i>
-                            </div>
-                        </div>
-                        <p class="founder-bio">Directs hard embedded systems, multi-wavelength spectroscopy alignment, and edge compute micro-architecture. Translates heavy lab analytics into ultra-compact, low-cost consumer silicon infrastructure.</p>
-                        <div class="founder-tags">
-                            <span class="founder-tag">Embedded Systems</span>
-                            <span class="founder-tag">Sensor Fusion</span>
-                            <span class="founder-tag">Edge Processing</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="advisors-section">
-            <div class="advisors-container">
-                <div class="advisors-title">
-                    <h3>Strategic Guidance</h3>
-                    <h2>Advisory Board</h2>
-                </div>
-                <div class="advisors-grid">
-                    <div class="advisor-card">
-                        <div class="advisor-header">
-                            <div class="advisor-icon-box">
-                                <i data-lucide="flask-conical" style="width: 18px; height: 18px;"></i>
-                            </div>
-                            <div class="advisor-info">
-                                <h4>Food Research</h4>
-                                <div class="advisor-role">Advisory Council</div>
-                            </div>
-                        </div>
-                        <p class="advisor-desc">Guiding molecular tracking signatures, validation baselines, and food purity benchmarks to map out hidden contaminants.</p>
-                    </div>
-                    <div class="advisor-card">
-                        <div class="advisor-header">
-                            <div class="advisor-icon-box">
-                                <i data-lucide="apple" style="width: 18px; height: 18px;"></i>
-                            </div>
-                            <div class="advisor-info">
-                                <h4>Nutrients Desk</h4>
-                                <div class="advisor-role">Advisory Council</div>
-                            </div>
-                        </div>
-                        <p class="advisor-desc">Advising on nutrient density tracking algorithms, bio-availability scores, and dietary intake profiling strategies.</p>
-                    </div>
-                    <div class="advisor-card">
-                        <div class="advisor-header">
-                            <div class="advisor-icon-box">
-                                <i data-lucide="cpu" style="width: 18px; height: 18px;"></i>
-                            </div>
-                            <div class="advisor-info">
-                                <h4>Sensor Systems</h4>
-                                <div class="advisor-role">Advisory Council</div>
-                            </div>
-                        </div>
-                        <p class="advisor-desc">Optimizing solid-state spectral array components, micro-optics, and cross-channel sensor calibration metrics.</p>
-                    </div>
-                    <div class="advisor-card">
-                        <div class="advisor-header">
-                            <div class="advisor-icon-box">
-                                <i data-lucide="rocket" style="width: 18px; height: 18px;"></i>
-                            </div>
-                            <div class="advisor-info">
-                                <h4>AI Scaling Desk</h4>
-                                <div class="advisor-role">Advisory Council</div>
-                            </div>
-                        </div>
-                        <p class="advisor-desc">Directing edge matrix deployment pipelines, automated model retraining, and worldwide neural grid expansion networks.</p>
-                    </div>
-                    <div class="advisor-card">
-                        <div class="advisor-header">
-                            <div class="advisor-icon-box">
-                                <i data-lucide="globe" style="width: 18px; height: 18px;"></i>
-                            </div>
-                            <div class="advisor-info">
-                                <h4>Global Ops / Finance</h4>
-                                <div class="advisor-role">Advisory Council</div>
-                            </div>
-                        </div>
-                        <p class="advisor-desc">Structuring cross-border hardware supply chains, international trade compliance, and optimizing consumer unit economics for global distribution.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="diagram-section" id="pipeline">
-            <div class="section-title">
-                <h2>Data Pipeline & Future-Proof Topology</h2>
-                <p>An architectural abstraction showing how multi-vector environmental inputs are converted into instant, actionable consumer safety notifications.</p>
-            </div>
-            <div class="topology-container">
-                <div class="topology-layer">
-                    <div class="topology-node">
-                        <div style="color: var(--accent-cyan); margin-bottom: 0.5rem;"><i data-lucide="activity"></i></div>
-                        <h4>Multi-Spectral Spectroscopy</h4>
-                        <p>Extracts deep chemical and composition signatures using optical reflection curves.</p>
-                        <span class="plain-explanation">&rarr; Shines safe light to analyze core intake properties.</span>
-                    </div>
-                    <div class="topology-node database-hub">
-                        <div style="color: #E0AAFF; margin-bottom: 0.5rem;"><i data-lucide="database"></i></div>
-                        <h4>Environmental & Chemical Bank</h4>
-                        <p style="color: var(--text-muted);">Supplies asynchronous baseline references for molecular structures, wave hazards, and air metrics.</p>
-                        <span class="plain-explanation" style="color: #E0AAFF;">&rarr; Instantly cross-references ambient readings with global baselines.</span>
-                    </div>
-                    <div class="topology-node">
-                        <div style="color: var(--accent-cyan); margin-bottom: 0.5rem;"><i data-lucide="rss"></i></div>
-                        <h4>Multi-Vector Expansion Slot</h4>
-                        <p>Designed to scale via software updates and modular arrays for air, radiation, smell, and pollution parameters.</p>
-                        <span class="plain-explanation">&rarr; Future-proof architecture built to map your entire environment.</span>
-                    </div>
-                </div>
-                <div class="vector-pipe-container">
-                    <svg viewBox="0 0 1100 70" preserveAspectRatio="none">
-                        <path d="M 285,0 Q 550,35 550,70" class="pipe-line" fill="none" />
-                        <path d="M 550,0 L 550,70" class="pipe-line pipe-line-active" fill="none" />
-                        <path d="M 815,0 Q 550,35 550,70" class="pipe-line" fill="none" />
-                    </svg>
-                </div>
-                <div class="topology-layer">
-                    <div class="topology-node central-hub">
-                        <div style="color: var(--accent-cyan); margin-bottom: 0.5rem;"><i data-lucide="git-merge"></i></div>
-                        <h4 style="color: var(--accent-cyan);">Edge Fusion Engine</h4>
-                        <p style="color: var(--text-main);">Processes incoming sensory data channels simultaneously within local micro-architecture profiles.</p>
-                        <span class="plain-explanation">&rarr; Securely runs advanced AI directly on the handheld device.</span>
-                    </div>
-                </div>
-                <div class="vector-pipe-container">
-                    <svg viewBox="0 0 1100 70" preserveAspectRatio="none">
-                        <path d="M 550,0 L 550,70" class="pipe-line pipe-line-active" fill="none" />
-                    </svg>
-                </div>
-                <div class="topology-layer">
-                    <div class="topology-node output-anchor">
-                        <div style="color: var(--accent-neon); margin-bottom: 0.5rem;"><i data-lucide="sparkles"></i></div>
-                        <h4>Total Exposure Index</h4>
-                        <p>Locks in precise baselines for air cleanliness, ambient waves, and pure ingredient scores.</p>
-                        <span class="plain-explanation" style="color: var(--accent-neon);">&rarr; Pinpoints safety anomalies to benchmark your pure survival standard.</span>
-                    </div>
-                </div>
-                <div class="vector-pipe-container">
-                    <svg viewBox="0 0 1100 70" preserveAspectRatio="none">
-                        <path d="M 550,0 L 550,70" class="pipe-line" fill="none" />
-                    </svg>
-                </div>
-                <div class="topology-layer">
-                    <div class="topology-node" style="border-color: var(--accent-neon);">
-                        <div style="color: var(--accent-neon); margin-bottom: 0.5rem;"><i data-lucide="check-square"></i></div>
-                        <h4>Action Intelligence Output</h4>
-                        <p>Delivers clean, actionable chemical, particulate, and hazard notifications straight to your display terminal.</p>
-                        <span class="plain-explanation">&rarr; Tells you precisely what you are breathing, touching, and absorbing.</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="economics-banner" id="economics-section">
-            <div class="econ-wrapper">
-                <div class="section-title" style="margin-bottom: 3rem;">
-                    <h2>Low Lifetime Cost, No Subscriptions</h2>
-                    <p>We are breaking free from legacy cloud infrastructure fees. By embedding processing directly into our edge hardware architecture, you enjoy maximum data analysis speeds without monthly payments.</p>
-                </div>
-                
-                <div class="econ-grid">
-                    <div class="econ-card highlight">
-                        <div class="econ-label">Transparent Unit Pricing</div>
-                        <div class="econ-metric" id="econ-card-primary-title">Affordable Home Protection</div>
-                        <p id="econ-card-primary-desc">Premium lab-grade safety made affordable for everyday lives. We avoid artificial subscription barriers to make total intake transparency universal.</p>
-                    </div>
-                    <div class="econ-card">
-                        <div class="econ-label">Hybrid Compute Efficiency</div>
-                        <div class="econ-metric" style="font-size: clamp(1.2rem, 2.5vw, 1.6rem);" id="econ-card-secondary-title">Edge Systems + Local Processing</div>
-                        <p id="econ-card-secondary-desc">Processing heavy mathematical algorithms locally lets us drastically lower backend server overhead, giving you instant validation speeds completely free of service charges.</p>
-                    </div>
-                </div>
-
-                <div class="tamsamsom-wrapper" id="investor-tamsamsom-panel">
-                    <div style="text-align: center; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem;">
-                        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--accent-cyan);">Global Market Sizing Blueprint (5-Year Strategy)</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.3rem;">Click individual concentric layers to drill down into the mathematical model data.</p>
-                    </div>
-                    
-                    <div class="tamsamsom-grid">
-                        <div class="concentric-market-chart">
-                            <div class="market-ring ring-tam" id="layer-tam" onclick="updateMarketData('tam')">
-                                <span class="ring-tag tag-tam">TAM</span>
-                                <div class="market-ring ring-sam" id="layer-sam" onclick="event.stopPropagation(); updateMarketData('sam')">
-                                    <span class="ring-tag tag-sam">SAM</span>
-                                    <div class="market-ring ring-som" id="layer-som" onclick="event.stopPropagation(); updateMarketData('som')">
-                                        <span class="ring-tag tag-som">SOM</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="market-analysis-panel">
-                            <div class="active-metric-title" id="m-title"><i data-lucide="pie-chart" style="width: 18px; height: 18px; color: var(--accent-neon);"></i> SOM (Serviceable Obtainable Market)</div>
-                            <div class="active-metric-value-wrapper">
-                                <div class="active-metric-value" id="m-value">$8.5 Billion USD</div>
-                            </div>
-                            <p class="active-metric-desc" id="m-desc">Our targeted 5-year cumulative trajectory to hit $8.5B global revenue requires rapid unit deployment across target international territories, scaled sequentially as automated global manufacturing and localization efficiencies expand.</p>
-
-                            <div class="active-metric-anchor" id="m-anchor" style="margin-top: 1.2rem;">Data Anchor: Scaled Target of the Global Wearable and Environmental Sensor Shipments</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" id="features">
-            <div class="section-title">
-                <h2>The Technical Value Proposition</h2>
-                <p>Moving from manual guesswork to un-falsifiable ambient and material tracking data.</p>
-            </div>
-            <div class="grid-3">
-                <div class="tech-card">
-                    <div class="card-icon-frame"><i data-lucide="layers" style="width: 24px; height: 24px;"></i></div>
-                    <h3>Hardware Sensor Fusion Moat</h3>
-                    <p>Combines multi-wavelength spectroscopic analysis with localized ambient arrays. This approach isolates target materials perfectly, ensuring stable, reliable accuracy inside any domestic environment.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="card-icon-frame"><i data-lucide="wind" style="width: 24px; height: 24px;"></i></div>
-                    <h3>The Horizon Roadmap</h3>
-                    <p>KWIX is conceptually designed to expand far beyond food. Future iterations map total wellness vectors—acting as an all-in-one tracker for air quality indexes, EMI radiation drops, olfactory smell profiles, and complex toxic pollutants.</p>
-                </div>
-                <div class="tech-card">
-                    <div class="cyan-frame-icon card-icon-frame"><i data-lucide="fingerprint" style="width: 24px; height: 24px;"></i></div>
-                    <h3>Unalterable Intake Analytics</h3>
-                    <p>Every element carries a distinct signature. By logging these digital baselines directly on secure storage modules, consumers can quickly spot local toxic trends, hidden allergens, or unexpected spikes in electromagnetic frequency exposure.</p>
-                </div>
+                <h2>Real-Time Pure Survival Intelligence</h2>
+                <p>We are a highly integrated team bridging the gap between hardware system architecture and proactive lifestyle protection. By condensing bulky laboratory analytical instruments into a streamlined, edge-powered pocket device, we replace simple step-counters with true molecular safety vectors.</p>
+                <p>Our platform reads food purity signatures, tracks microplastics, and builds real-time environmental baselines. With KWIX, your data updates continuously to help you discover precisely what you are absorbing, breathing, and consuming.</p>
             </div>
         </section>
     </main>
 
     <div class="modal-overlay" id="contact-modal">
         <div class="modal-card">
-            <button class="modal-close" onclick="closeModal()"><i data-lucide="x"></i></button>
-            <h3 id="modal-title">Request Portal Access</h3>
-            <p id="modal-desc">Connect with our engineering and pipeline infrastructure desk to view validation metrics, pilots, and timeline logs.</p>
-            <button class="btn-primary" style="width: 100%;" onclick="submitModalRequest()">Open Secure Communication Line</button>
+            <h3>Join the Early Prototyping Wave</h3>
+            <p>Secure your spot in our limited release pool and move your tracking past simple fitness biometrics.</p>
+            <button class="btn-primary" onclick="submitModalRequest()">Open Access Line</button>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 KWIX INC. Contact: <a href="javascript:void(0)" onclick="openModal('consumer')">briefing@twix.life</a></p>
+        <p>&copy; 2026 KWIX LIFE. Contact: <a href="mailto:briefing@kwix.life">briefing@kwix.life</a></p>
     </footer>
 
     <script>
-        // 1. Disable Right-Click Context Menu
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-
-        // 2. Terminate Keyboard Extractions (Copy, Save, Document Inspection)
-        document.addEventListener('keydown', function(e) {
-            // Block Ctrl+C / Cmd+C (Copy)
-            if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
-                e.preventDefault();
-            }
-            // Block Ctrl+S / Cmd+S (Save Markup Dom)
-            if ((e.ctrlKey || e.metaKey) && e.key === 's') {
-                e.preventDefault();
-            }
-            // Block F12 (Inspect Panel) & Ctrl+Shift+I / Cmd+Option+I (DevTools System Engine)
-            if (e.key === 'F12' || ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'I')) {
-                e.preventDefault();
-            }
-        });
-
-        // 3. Prevent Drag and Drop Image Extraction
-        document.addEventListener('dragstart', function(e) {
-            if (e.target.nodeName === 'IMG') {
-                e.preventDefault();
-            }
-        });
-    </script>
-
-    <script>
         lucide.createIcons();
-
-        const audienceData = {
-            consumer: {
-                tagline: "Know what you take, shape what you are",
-                title: "Scan Your Intake. <br><span>Instant Lab-Grade Safety at Pocket.</span>",
-                desc: "KWIX is a pocket-sized scanner that takes the guesswork out of your environment and well-being. It actively verifies the purity, freshness, and elemental safety of what you consume and inhale in seconds—giving your daily life a professional-grade protective shield at an everyday affordable price.",
-                cta: "Get Early Prototype Access",
-                badge: "Consumer Edition",
-                hudStatus: "ANALYZING",
-                hudValue: "98.4% PURE",
-                econTitle1: "~$40 USD Unit Price",
-                econDesc1: "Premium lab-grade safety made affordable for everyday lives. We avoid artificial subscription barriers to make total intake transparency universal.",
-                econTitle2: "Edge Systems + Local Processing",
-                econDesc2: "Processing heavy mathematical algorithms locally lets us drastically lower backend server overhead, giving you instant validation speeds completely free of service charges.",
-                showTamSamSom: false
-            },
-            innovation: {
-                tagline: "Know what you take, shape what you are",
-                title: "Shrinking Lab-Grade Analysis <br><span>Into a Multi-Vector Edge Device.</span>",
-                desc: "Our core milestone is taking heavy analytical laboratory tools and compressing them into consumer-grade hardware. By processing complex material, wave, and particle data profiles on local edge processing units, we achieve instant safety readings free from environmental signal corruption.",
-                cta: "View System Topology Whitepaper",
-                badge: "Tech Validation Mode",
-                hudStatus: "SPECTRA",
-                hudValue: "Δλ: 2.1nm",
-                econTitle1: "Multi-Sensor Miniaturization",
-                econDesc1: "Our breakthrough integrates multi-spectral optical reflection nodes with advanced local spatial contour sensors on a modular alignment frame built to absorb expanded telemetry channels over time.",
-                econTitle2: "Asynchronous Data Pipeline",
-                econDesc2: "Local spatial engines isolate dynamic noise patterns, isolating environmental light distortions, radio interference, and particulate currents prior to matching profiles with culinary and environmental databanks.",
-                showTamSamSom: false
-            },
-            investor: {
-                tagline: "Know what you take, shape what you are",
-                title: "Disrupting a Multi-Billion Dollar <br><span>Total Environmental Health & Safety Category.</span>",
-                desc: "KWIX transitions well-being electronics from simple step-counters to authentic molecular and environmental tracking. By combining adaptive edge sensors with a vast, un-clonable signature database, we open up massive consumer utility spanning air quality, radiation, and material safety fields.",
-                cta: "Access Executive Pitch Deck",
-                badge: "Seed Series Portal",
-                hudStatus: "SI MOAT",
-                hudValue: "82% MOX",
-                econTitle1: "Exceptional Gross Margin Story",
-                econDesc1: "By handling complex compute parameters entirely within local edge hardware chips, we completely strip away ongoing backend infrastructure platform overhead, maintaining clean, scalable margins.",
-                econTitle2: "Unfair Horizon Expansion Advantage",
-                econDesc2: "The device design is structurally ready to extend beyond material scanning into tracking air pollutants, EMI fields, and odor profiles via continuous software array modifications, magnifying our market footprint.",
-                showTamSamSom: true
-            }
-        };
-
-        const marketMetrics = {
-            tam: {
-                title: "TAM (Total Addressable Market)",
-                value: "$95.0 Billion USD",
-                desc: "Represents the absolute maximum revenue structural ceiling if health-conscious households across major international markets purchase one KWIX utility device unit at the fixed baseline global retail pricing matrix of ~$40 USD.",
-                anchor: "Market Anchor: Global Target Household Universe"
-            },
-            sam: {
-                title: "SAM (Serviceable Addressable Market)",
-                value: "$38.0 Billion USD",
-                desc: "The realistic volume segment of addressable modern consumer-class, middle, and rising upper-middle-class households worldwide that actively buy small lifestyle appliances, advanced air/water filtration platforms, and functional home health monitors.",
-                anchor: "Data Anchor: Top Tier & Urban Global Consumer Demographic Base"
-            },
-            som: {
-                title: "SOM (Serviceable Obtainable Market)",
-                value: "$8.5 Billion USD",
-                desc: "Our targeted 5-year cumulative trajectory to hit $8.5B global revenue requires rapid unit deployment across target international territories, scaled sequentially as automated global manufacturing and localization efficiencies expand.",
-                anchor: "Data Anchor: Scaled Target of the Global Wearable and Environmental Sensor Shipments"
-            }
-        };
-
-        let currentAudienceState = 'consumer';
-
-        function navigateToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-            switchAudience('consumer');
-        }
-
-        function switchAudience(type) {
-            currentAudienceState = type;
-            
-            document.querySelectorAll('.tab-trigger').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            const activeTab = document.getElementById(`tab-${type}`);
-            if (activeTab) activeTab.classList.add('active');
-
-            const content = audienceData[type];
-            document.getElementById('hero-tagline').innerText = content.tagline;
-            document.getElementById('hero-title').innerHTML = content.title;
-            document.getElementById('hero-desc').innerText = content.desc;
-            document.getElementById('hero-cta').innerText = content.cta;
-            document.getElementById('node-badge').innerText = content.badge;
-            document.getElementById('hud-status').innerText = content.hudStatus;
-            document.getElementById('hud-value').innerText = content.hudValue;
-            
-            document.getElementById('econ-card-primary-title').innerText = content.econTitle1;
-            document.getElementById('econ-card-primary-desc').innerText = content.econDesc1;
-            document.getElementById('econ-card-secondary-title').innerText = content.econTitle2;
-            document.getElementById('econ-card-secondary-desc').innerText = content.econDesc2;
-
-            const tssPanel = document.getElementById('investor-tamsamsom-panel');
-            if (content.showTamSamSom) {
-                tssPanel.style.display = 'block';
-                updateMarketData('som');
-            } else {
-                tssPanel.style.display = 'none';
-            }
-        }
-
-        function triggerInvestorPortalFlow() {
-            switchAudience('investor');
-            document.getElementById('economics-section').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        function updateMarketData(key) {
-            const metric = marketMetrics[key];
-            document.getElementById('m-title').innerHTML = `<i data-lucide="pie-chart" style="width: 18px; height: 18px; color: var(--accent-neon);"></i> ${metric.title}`;
-            document.getElementById('m-value').innerText = metric.value;
-            document.getElementById('m-desc').innerText = metric.desc;
-            document.getElementById('m-anchor').innerText = metric.anchor;
-            
-            lucide.createIcons();
-
-            document.querySelectorAll('.market-ring').forEach(ring => {
-                ring.classList.remove('active-layer');
-            });
-            
-            document.getElementById(`layer-${key}`).classList.add('active-layer');
-        }
-
-        function handleCtaAction() { 
-            if (currentAudienceState === 'investor') {
-                document.getElementById('economics-section').scrollIntoView({ behavior: 'smooth' });
-            } else {
-                openModal(currentAudienceState); 
-            }
-        }
-
-        function openModal(type) {
-            if (type === 'investor') return;
-
-            const modal = document.getElementById('contact-modal');
-            const title = document.getElementById('modal-title');
-            const desc = document.getElementById('modal-desc');
-            
-            modal.style.display = 'flex';
-
-            if(type === 'innovation') {
-                title.innerText = "Request Technical Specifications & Whitepaper";
-                desc.innerText = "Review our structural core SDK layers, modular sensor integration paths (Air/EMI/Smell), and machine learning engine datasets.";
-            } else {
-                title.innerText = "Join the Early Household Prototype Program";
-                desc.innerText = "Secure your place in our localized hardware release wave and gain early access to total personal intake profiling tools.";
-            }
-        }
-
-        function closeModal() { document.getElementById('contact-modal').style.display = 'none'; }
-
-        function submitModalRequest() {
-            var prefix = "briefing";
-            var host = "twix.life";
-            window.location.href = "mailto:" + prefix + "@" + host + "?subject=" + encodeURIComponent("KWIX System Inquiry: " + currentAudienceState);
-            closeModal();
-        }
+        function openModal() { document.getElementById('contact-modal').style.display = 'flex'; }
+        function submitModalRequest() { window.location.href = "mailto:briefing@twix.life?subject=KWIX Early Intake Access"; }
     </script>
 </body>
 </html>
